@@ -1,10 +1,10 @@
 """
 HaMeR ViT-B Training v2
-Miglioramenti rispetto a v1:
-- Reprojection loss 2D (risolve il problema di localizzazione)
-- Warmup LR + CosineAnnealing
+Improvements over v1:
+- 2D reprojection loss (solves the localization problem)
+- Warmup LR + Cosine Annealing
 - Early stopping
-- Loss pesate come nel paper originale
+- Weighted losses as in the original paper
 """
 
 import os
