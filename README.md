@@ -1,25 +1,40 @@
 # HaMeR ViT-B Ablation Study
 
-Progetto d'esame — Computer Vision, Magistrale Informatica, UniBO
+Exam Project — Computer Vision, Master's Degree in Computer Science, UniBO
+## Task
 
-## Obiettivo
+Ablation study on the [HaMeR (CVPR 2024)](https://github.com/geopavlakos/hamer) architecture: replacing the ViT-H backbone (632M parameters) with ViT-B (123M parameters) to analyze the trade-off between model size and 3D hand reconstruction quality.
 
-Ablation study sull'architettura di [HaMeR (CVPR 2024)](https://github.com/geopavlakos/hamer): sostituzione del backbone ViT-H (632M parametri) con ViT-B (123M parametri) per analizzare il trade-off tra dimensione del modello e qualità della ricostruzione 3D della mano.
-
-## Struttura
+## Project Structure
 scripts/
-├── vit.py              # backbone ViT-B aggiunto (modifica di hamer/models/backbones/vit.py)
-├── init.py         # factory aggiornato (modifica di hamer/models/backbones/init.py)
-├── hamer.py            # renderer reso opzionale (modifica di hamer/models/hamer.py)
-├── aggiorna_npz.py     # preprocessing: aggiunge keypoint 2D al dataset FreiHAND
-├── train_vitb_v2.py    # training script v2 (con reprojection loss 2D)
+ vit.py              
+├── init.py        # factory updated (edited hamer/models/backbones/init.py)
+├── hamer.py            # renderer made optional (edit from hamer/models/hamer.py)
+├── aggiorna_npz.py     # preprocessing: Add 2D keypoints to the FreiHAND dataset
+├── train_vitb_v2.py    # training script v2 (with reprojection loss 2D)
 ├── train_vitb.py       # training script v1
-├── job_v2.sbatch       # SLURM job per cluster DISI (partizione l40)
+├── job_v2.sbatch       # SLURM job for cluster DISI (partition l40)
 └── job.sbatch          # SLURM job v1
 notebooks/
-└── inference_demo.ipynb  # demo inferenza su Colab
+└── inference_demo.ipynb  # inference demo on Colab
 results/
-└── confronto_finale.png  # confronto qualitativo ViT-H vs ViT-B
+└── confronto_finale.png  # qualitative comparison ViT-H vs ViT-B
+
+hamer-vitb-ablation/
+├── scripts/
+│   ├── vit.py              # ViT-B backbone added (edit hamer/models/backbones/vit.py)
+│   ├── hamer.py            # renderer made optional (edit from hamer/models/hamer.py)
+│   ├── aggiorna_npz.py     # preprocessing: Add 2D keypoints to the FreiHAND dataset
+│   ├── train_vitb_v2.py    # training script v2 (with reprojection loss 2D)
+│   ├── train_vitb.py       # training script v1
+│   ├── job_v2.sbatch       # SLURM job for cluster DISI (partition l40)
+│   └── job.sbatch          # SLURM job v1
+├── notebooks/
+└── inference_demo.ipynb    # inference demo on Colab
+├── results/
+└── confronto_finale.png    # qualitative comparison ViT-H vs ViT-B
+├── requirements.txt
+└── README.md
 
 ## Modifiche al codice originale HaMeR
 
