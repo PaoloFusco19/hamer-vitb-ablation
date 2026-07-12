@@ -79,3 +79,17 @@ Trained checkpoint available on Google Drive: [link TBD]
 ## Reference
 
 Pavlakos et al., *Reconstructing Hands in 3D with Transformers*, CVPR 2024.
+
+## Quick Demo (no training required)
+
+To just run inference with the trained checkpoint:
+
+1. Download the trained checkpoint from Google Drive: [link TBD]
+2. Open `notebooks/inference_demo.ipynb` in Google Colab
+3. Mount your Drive, place the checkpoint at the expected path, and run all cells
+
+## Full Reproduction (training from scratch)
+
+Follow the Setup and Reproduction steps above.
+Requires access to a GPU cluster with SLURM (tested on NVIDIA L40, 48GB VRAM).
+Expected training time: ~6 hours for 30 epochs.
