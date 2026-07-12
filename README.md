@@ -6,10 +6,6 @@ Computer Vision Exam Project — Master's Degree in Computer Science, UniBO
 
 Ablation study on the [HaMeR (CVPR 2024)](https://github.com/geopavlakos/hamer) architecture: replacing the ViT-H backbone (632M parameters) with ViT-B (123M parameters) to analyze the trade-off between model size and 3D hand reconstruction quality.
 
-## Task
-
-Ablation study on the [HaMeR (CVPR 2024)](https://github.com/geopavlakos/hamer) architecture: replacing the ViT-H backbone (632M parameters) with ViT-B (123M parameters) to analyze the trade-off between model size and 3D hand reconstruction quality.
-
 ## Project Structure
 
     hamer-vitb-ablation/
